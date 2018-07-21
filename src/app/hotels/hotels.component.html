@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hoteles</title>
+    </head>
+    <body>
+        <form #hotelesForm="ngForm">
+            <p-dataView #dv [value]="hotels" [paginator]="true" [rows]="10" paginatorPosition="both" filterBy="name" [style]="{'width':'1300px'}"
+            [sortField]="sortField" [sortOrder]="sortOrder">
+                <p-header>
+                    <div class="ui-helper-clearfix">
+                        <div class="ui-g" style="min-width: 10em">
+                            <img src="assets/images/logo-almundo.svg">
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-12 ui-md-4">
+                                <p-dropdown name="sortKey" [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By" (onChange)="onSortChange($event)" [autoWidth]="false" [style]="{'min-width':'15em'}"></p-dropdown>
+                            </div>
+                            <div class="ui-g-6 ui-md-4 filter-container">
+                                <div style="position:relative">
+                                    <input type="search" pInputText placeholder="Search by name" (keyup)="dv.filter($event.target.value)">
+                                </div>
+                            </div>
+                            <div class="ui-g-6 ui-md-4" style="text-align:right">
+                                <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+                            </div>
+                        </div>
+                    </div>
+                </p-header>
+                <p-footer>There are {{hotels?.length}} Hotels</p-footer>
+                <ng-template let-hotel pTemplate="listItem">
+                    <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
+                        <div class="ui-g-12 ui-md-3" style="text-align:center">
+                            <img src="assets/images/hotels/{{hotel.image}}">
+                        </div>
+                        <div class="ui-g-12 ui-md-8 hotel-details">
+                            <div class="ui-g">
+                                <div class="ui-g-2 ui-sm-6" style="padding-left: 6em;">Id: </div>
+                                <div class="ui-g-10 ui-sm-6" style="padding-left: 6em;"><b>{{hotel.id}}</b></div>
+                                
+                                <div class="ui-g-2 ui-sm-6" style="padding-left: 6em;">Name: </div>
+                                <div class="ui-g-10 ui-sm-6" style="padding-left: 6em;"><b>{{hotel.name}}</b></div>
+
+                                <div class="ui-g-2 ui-sm-6" style="padding-left: 6em;">Start: </div>
+                                <div class="ui-g-10 ui-sm-6" style="padding-left: 6em;"><b>{{hotel.stars}}</b></div>
+
+                                <div class="ui-g-2 ui-sm-6" style="padding-left: 6em;">Price: </div>
+                                <div class="ui-g-10 ui-sm-6" style="padding-left: 6em;"><b>{{hotel.price|currency}}</b></div>
+                            </div>
+                        </div>
+                        <div class="ui-g-12 ui-md-1 search-icon">
+                            <button pButton type="button" label="Amenities" icon="pi pi-search" (click)="selectHotel($event, hotel)"></button>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template let-hotel pTemplate="gridItem">
+                    <div style="padding:.5em" class="ui-g-12 ui-md-3">
+                        <p-panel [header]="hotel.name" [style]="{'text-align':'center'}">
+                            <img src="assets/images/hotels/{{hotel.image}}" width="300">
+                            <div class="hotel-detail">{{hotel.stars}} - {{hotel.price|currency}}</div>
+                            <hr class="ui-widget-content" style="border-top:0">
+                            <button pButton type="button" label="Amenities" icon="pi pi-search" (click)="selectHotel($event, hotel)" style="margin-top:0"></button>
+                        </p-panel>
+                    </div>
+                </ng-template>
+            </p-dataView>
+            
+            <p-dialog blockScroll="true" header="Amenities" [contentStyle]="{'overflow':'scroll'}" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" width="100" height="630" (onAfterHide)="onDialogHide()">
+                <div class="ui-g" *ngIf="selectedHotel">
+                    <div class="ui-g">Name: </div>
+                    <div class="ui-g">{{selectedHotel.name}}</div>
+                    <div class="ui-g-12" style="text-align:center" *ngFor="let amenity of selectedHotel.amenities">
+                        <img src="assets/icons/amenities/{{amenity}}.svg">
+                    </div>
+                </div>
+            </p-dialog>
+            
+        </form>
+    </body>
+</html>

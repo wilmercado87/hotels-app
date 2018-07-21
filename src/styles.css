@@ -1,0 +1,606 @@
+/* You can add global styles to this file, and also import other style files */
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+p-dropdown.ng-valid[required] > div,
+p-autocomplete.ng-valid.required > div {
+    border-left: 5px solid #42A948; /* green */
+}
+
+p-dropdown.ng-invalid:not(form) > div {
+    border-left: 5px solid #a94442; /* red */
+}
+
+p-dropdown.ng-valid[required], p-dropdown.ng-valid.required {
+    border-left: 0 none;
+}
+
+p-dropdown.ng-invalid:not(form) {
+    border-left: 0 none;
+}
+
+.panelMenu{
+    font-family: Arial;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+    background-color: #d9e5f1;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: bold;
+    text-transform: none;
+    padding-left: 5px; 
+}
+
+p-panelMenu.ui-panelmenu .ui-panelmenu-content .ui-menuitem-link.ui-state-active{
+    background-color: #1a2897;
+}
+
+.loading{
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin-top: 0px;
+}
+
+/*división que tiene un ancho de 80% de la página y se centra*/ 
+.contenedor80{
+    width: 80%;
+    margin-left: 10%;
+}
+
+/*división que tiene un ancho de 60% de la página y se centra*/ 
+.contenedor60{
+    width: 60%;
+    margin-left: 20%;	
+}
+
+
+/*división que tiene un ancho de 50% de la página y se centra*/ 
+.contenedor50{
+    width: 50%;
+    margin-left: 25%;	
+}
+
+/*división que tiene un ancho de 40% de la página y se centra*/ 
+.contenedor40{
+    width: 40%;
+    margin-left: 30%;	
+}
+
+/*división que tiene un ancho de 40% de la página y se centra*/ 
+.contenedor30{
+    width: 33.33%;
+    margin-left: 33.33%;	
+}
+
+.contenidoInformacion{
+    font-family: Arial;
+    font-size: 12px;
+    color: #000000;
+    background-color: #dfeaf4;
+    text-align: justify;
+    vertical-align: middle;
+    text-transform: none;
+    padding-left: 5px;
+}
+
+.textoCentrado{
+    text-align: center;
+    background-color: #ffffff;
+    font-family: arial;
+    color: #000000;
+    font-size: 11px
+}
+
+.textoFuente9{
+    background-color: #ffffff;	
+    font-family: arial;
+    color: #000000;
+    font-size: 9px;
+}
+
+.textoFuente12{
+    background-color: #ffffff;	
+    font-family: arial;
+    color: #000000;
+    font-size: 12px;
+}
+
+.textoFuente12Negrita{
+    font-family: arial;
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #d9e5f1;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 5px;
+    width: 220px;
+}
+
+.textoFuente12NegritaCellPequeña{
+    font-family: arial;
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #d9e5f1;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 5px;
+    width: 120px;
+}
+
+.celdaBordeSolidoFuente9{
+    background-color: #ffffff;
+    border: 1px solid #aaaaaa;
+    font-family: arial;
+    color: #000000;
+    font-size: 9px;
+}
+
+.celdaBordeSolidoFuente12Negrita{
+    background-color: #ffffff;
+    border: 1px solid #aaaaaa;
+    font-family: arial;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.celdaBordeSolidoFuente12{
+    background-color: #ffffff;
+    border: 1px solid #aaaaaa;
+    font-family: arial;
+    color: #000000;
+    font-size: 12px;
+}
+
+.celdaBordeSolidoFuente9Negrita{
+    background-color: #ffffff;
+    border: 1px solid #aaaaaa;
+    font-family: arial;
+    color: #000000;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.celdaNormal {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #000000;
+    text-align: left;
+    vertical-align: middle;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+/*Usado para el header con la informacion del usuario*/
+.tituloNombres {
+    background-color: #1a2897;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align: middle;
+    padding-left: 5px;
+    border: 1px solid #FFFFFF;
+    text-align: left;
+}
+
+/*Utilizado para el titulo del aplicativo*/
+.textoTituloAzulClaro {
+    font-family: Arial;
+    font-size: 10px;
+    color: #6699CC;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/*Utilizado para el titulo del aplicativo tamaño letra pequeño*/
+.textoCabezalFondoAzulClaro {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    border: 1px solid #98A3C9;
+    color: black;
+    background-color: #d9e5f1;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: left;
+    width: 100%;
+}
+
+header{
+    padding: 0.9em;
+    clear: left;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #1a2897;
+}
+
+/*Utilizado para las tablas en general*/
+.tablaGeneral {
+    font-family: Arial;
+    border: 1px solid #98A3C9;
+    padding: 0;
+}
+
+.tablaSinResultado {
+    border: 0px;
+    width: 500px;
+    padding: 0;
+}
+
+/*Utilizado para el titulo de las tablas*/
+.tituloTabla {
+    font-family: Arial;
+    font-size: 12px;
+    color: #FFFFFF;
+    background-color: #1a2897;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    text-transform: none;
+    padding-left: 5px;
+}
+
+.tituloHead {
+    font-family: Arial;
+    color: #FFFFFF;
+    background-color: #1a2897;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    text-transform: none;
+    padding-left: 5px;
+}
+
+.tituloCampo {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #d9e5f1;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+/*Utilizado para el titulo de las tablas*/
+.tituloTablaGris {
+    font-family: Arial;
+    font-size: 11px;
+    color: #000000;
+    background-color: #A7A9AC;
+    vertical-align: middle;
+    font-weight: bold;
+    text-transform: none;
+    padding-left: 5px;
+}
+
+.subtituloTablaGris {
+    font-family: Arial;
+    font-size: 9px;
+    color: #000000;
+    background-color: #A7A9AC;
+    vertical-align: middle;
+    text-transform: none;
+    padding-left: 5px;
+}
+
+/* Utilizada para los encabezados de la tabla del resumen de tarjetas*/
+.encabezadoTablaResumen {
+    background-color: #b59e08;
+    font-family: arial;
+    color: #000000;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center
+}
+
+/* Utilizado para los campos pares de las tablas */
+.lineaNormal {
+    background-color: #ffffff;
+    font-family: arial;
+    color: #000000;
+    font-size: 11px
+}
+
+/* Utilizado para los campos impares de las tablas */
+.lineaResaltada {
+    background-color: #dfeaf4;
+    font-family: arial;
+    color: #000000;
+    font-size: 11px
+}
+
+/*Utilizado para el final de una tabla */
+.lineaFinTabla {
+    background-color: #adb6d6;
+}
+
+/*Utilizado para el subtotal de la tabla de resumen de tarjetas*/
+.lineaSubtotal {
+    background-color: #adb6d7;
+    font-family: arial;
+    color: #000000;
+    font-size: 12pt
+}
+
+/*Utilizado para los vinculos de la tabla de resumen de tarjetas*/
+a.enlace:link {
+    font-family: Arial;
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+a.enlace:visited {
+    font-family: Arial;
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+a.enlace:active {
+    font-family: Arial;
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+a.enlace:hover {
+    font-family: Arial;
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+/*Utilizado para el mensaje de error*/
+.mensajeError {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+    background-color: #d9e5f1;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+/*Utilizado para el mensaje de mas informacion en las paginas de error*/
+.textoInformacionAdicional {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+/*Usado para el mensaje cuando no se encontro ningun dato*/
+.mensajeVerdeCentrado {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: #009933;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*Usado para el mensaje de informacion veridica y verificable*/
+.mensajeNegroCentrado {
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bolder;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+/*Utilizado para los subtitulos de una tabla*/
+.subtitulo {
+    background-color: #ffffff;
+    font-family: arial;
+    color: #294594;
+    font-size: 12pt;
+    font-weight: bold
+}
+
+/*Utilizado para la tabla del contrato*/
+.tablaContrato {
+    font-family: Arial;
+    border: solid 2px #1a2897;
+}
+
+/*Utilizado para la tabla del contrato*/
+.celdaContrato {
+    font-family: Arial;
+    font-size: 12px;
+    color: #000000;
+    text-align: justify;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+/* Utilizado para los campos pares de los formularios */
+.lineaNormalForm {
+    background-color: #ffffff;
+    font-family: Arial;
+    color: #000000;
+    font-size: 10pt;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+/* Utilizado para los campos impares de los formularios */
+.lineaResaltadaForm {
+    font-family: Arial;
+    color: #000000;
+    background-color: #dfeaf4;
+    font-size: 10pt;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+/* Se utiliza para los titulos de la tabla de confirmacion*/
+.textoCabezaConfirmacion {
+    font-family: Arial;
+    font-size: 12px;
+    background-color: #ADB6D6;
+    color: #000000;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* Se utiliza para el texto de la tabla de confirmacion*/
+.textoTablaConfirmacion {
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #DFEAF4;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+/* se utiliza para el subtitulo de la tabla de resultado */
+.subtituloResultado {
+    font-family: Arial;
+    font-size: 14px;
+    color: #5B6DAA;
+    background-color: #FFFFFF;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    text-transform: none;
+    padding-left: 5px;
+}
+
+/*Se utiliza para la tabla de los telefonos de las sucursales*/
+.tablaTelefonos {
+    font-family: Arial;
+    font-size: 12px;
+    color: #1a2897;
+    border: solid 1px #f3f8fa;
+}
+
+.nombreCiudad {
+    font-family: Arial;
+    font-weight: bolder;
+    border: solid 1px #f3f8fa;
+}
+
+.numeroTelefono {
+    font-family: Arial;
+    border: solid 1px #f3f8fa;
+}
+
+/* Se utiliza para un Subtiulo negro resaltado*/
+.subtituloOscuro {
+    font-family: Arial;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Se utiliza para la tabla de filtros*/
+.tablaFiltros {
+    font-family: Arial;
+    font-size: 12px;
+}
+
+/*Utilizado para el titulo de las tablas de resumen de registros*/
+.tituloTablaResumenRegistros {
+    font-family: Arial;
+    font-size: 12px;
+    color: #FFFFFF;
+    background-color: #1a2897;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    text-transform: none;
+    padding-left: 5px;
+}
+
+.boton {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color:#91AAF2;
+    text-align: center;
+    height: 22px;	
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #336699;
+    border-bottom-width: 2px;	
+    border-bottom-style: solid;
+    border-bottom-color: #4D5980;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: #4D5980;
+    border-left-width: 1px;
+    border-left-style: solid;	
+    border-left-color: #336699;
+}
+
+button:disabled,
+button[disabled]{
+  opacity: 0.65; 
+  cursor: not-allowed;
+}
+
+.comboPequeno {
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-align: left;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #98A3C9;
+}
+
+.labelAsterisco {
+    color: red;
+}
+
+TR.lineaResaltadaOscura {
+    background-color: #ADB6D6;
+}
+
+article {
+    float: inside;
+    margin-left: 220px;
+    padding-bottom: 32em;
+    padding-top: 10px;
+    padding-left: 10px;
+    overflow: hidden;
+    border: 2px solid #98A3C9;
+}
+
+nav {
+    float: left;
+    max-width: 220px;
+    margin: 0;
+    padding-top: 0em;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+  color: #d9e5f1;
+}
